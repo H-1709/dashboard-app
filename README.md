@@ -26,4 +26,4 @@ A security dashboard application built with React that allows users to dynamical
 
 ### Installation
 
-1. Clone the repository:  https://github.com/H-1709/security-dashboard.git
+1. Clone the repository:  https://github.com/H-1709/dashboard-app.git
