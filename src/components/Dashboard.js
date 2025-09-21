@@ -21,14 +21,18 @@ const Dashboard = () => {
   }).filter(category => category.widgets.length > 0);
 
   return (
-    <div className="dashboard">
-      <h1>Dashboard</h1>
-      <SearchBar />
-      <div className="categories">
+    <div className="dashboard-container">
+      <div className="dashboard-header">
+        <h1>Security Dashboard</h1>
+        <SearchBar />
+      </div>
+      
+      <div className="dashboard-grid">
         {filteredCategories.map(category => (
           <Category key={category.id} category={category} />
         ))}
       </div>
+      
       <AddWidgetModal />
     </div>
   );

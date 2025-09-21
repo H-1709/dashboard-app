@@ -1,14 +1,15 @@
-# Dashboard App
+# Security Dashboard Application
 
-A dynamic dashboard application built with React that allows users to add, remove, and search widgets across different categories.
+A security dashboard application built with React that allows users to dynamically manage widgets across different categories.
 
 ## Features
 
-- Display widgets in different categories
-- Add new widgets with custom name and text
-- Remove widgets from categories
-- Search functionality across all widgets
+- Dynamic dashboard with categories and widgets
+- Add/remove widgets functionality
+- Search capability across all widgets
+- Modal for adding new widgets
 - Responsive design
+- UI similar to the provided security dashboard image
 
 ## Technologies Used
 
@@ -25,6 +26,4 @@ A dynamic dashboard application built with React that allows users to add, remov
 
 ### Installation
 
-1. Clone the repository:
- https://github.com/H-1709/dashboard-app.git
- 
+1. Clone the repository:  https://github.com/H-1709/security-dashboard.git

@@ -16,7 +16,8 @@ const Category = ({ category }) => {
           + Add Widget
         </button>
       </div>
-      <div className="widgets">
+      
+      <div className="widgets-container">
         {category.widgets.map(widget => (
           <Widget 
             key={widget.id} 

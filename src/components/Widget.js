@@ -9,7 +9,7 @@ const Widget = ({ widget, categoryId }) => {
   };
 
   return (
-    <div className="widget">
+    <div className="widget" style={{ backgroundColor: widget.color }}>
       <div className="widget-header">
         <h3>{widget.name}</h3>
         <button className="remove-widget-btn" onClick={handleRemove}>

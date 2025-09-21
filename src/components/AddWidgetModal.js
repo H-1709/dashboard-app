@@ -33,6 +33,7 @@ const AddWidgetModal = () => {
             ×
           </button>
         </div>
+        
         <form onSubmit={handleSubmit} className="add-widget-form">
           <div className="form-group">
             <label htmlFor="widget-name">Widget Name</label>
@@ -44,6 +45,7 @@ const AddWidgetModal = () => {
               required
             />
           </div>
+          
           <div className="form-group">
             <label htmlFor="widget-text">Widget Text</label>
             <textarea
@@ -53,6 +55,7 @@ const AddWidgetModal = () => {
               required
             ></textarea>
           </div>
+          
           <div className="form-actions">
             <button type="submit" className="submit-btn">
               Add Widget

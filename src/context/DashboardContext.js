@@ -1,38 +1,10 @@
 import React, { createContext, useState, useContext } from 'react';
+import { initialCategories } from '../data/initialData';
 
 const DashboardContext = createContext();
 
 export const DashboardProvider = ({ children }) => {
-  const [categories, setCategories] = useState([
-    {
-      id: 'category1',
-      name: 'CSPM Executive Dashboard',
-      widgets: [
-        {
-          id: 'widget1',
-          name: 'Cloud Accounts',
-          text: 'Random text for Cloud Accounts widget'
-        },
-        {
-          id: 'widget2',
-          name: 'Cloud Risk Assessment',
-          text: 'Random text for Cloud Risk Assessment widget'
-        }
-      ]
-    },
-    {
-      id: 'category2',
-      name: 'CWPP Dashboard',
-      widgets: [
-        {
-          id: 'widget3',
-          name: 'Container Security',
-          text: 'Random text for Container Security widget'
-        }
-      ]
-    }
-  ]);
-  
+  const [categories, setCategories] = useState(initialCategories);
   const [searchTerm, setSearchTerm] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentCategory, setCurrentCategory] = useState(null);
@@ -41,11 +13,16 @@ export const DashboardProvider = ({ children }) => {
     setCategories(prevCategories => 
       prevCategories.map(category => {
         if (category.id === categoryId) {
+          const colors = ['#e3f2fd', '#e8f5e9', '#fff3e0', '#e0f2f1', '#fbe9e7', '#f3e5f5'];
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
+          
           const newWidget = {
             id: `widget${Date.now()}`,
             name: widgetName,
-            text: widgetText
+            text: widgetText,
+            color: randomColor
           };
+          
           return {
             ...category,
             widgets: [...category.widgets, newWidget]
